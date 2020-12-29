@@ -2,7 +2,13 @@
   <div id="app">
     <main>
       <div class="search-box">
-        <input type="text" class="search-bar" placeholder="search..."/>
+        <input 
+        type="text" 
+        class="search-bar" 
+        placeholder="search..."
+        v-model="query"
+        @keypress="fetchWeather"
+        />
       </div>
 
       <div class="weather-wrap">
@@ -26,10 +32,21 @@ export default {
   name: 'App',
   data(){
     return{
-      api_key: 'b7f7ba740725cadece7fa95b9c604600'
+      api_key: 'b7f7ba740725cadece7fa95b9c604600',
+      url_base: 'api.openweathermap.org/data/2.5',
+      query: '',
+      weather: {}
+    }
+  },
+  methods: {
+    fetchWeather(e) {
+      if (e.key == "Enter"){
+        fetch(`${this.api_base}weather?q=${this.query}`)
+      }
     }
   }
 }
+
 </script>
 
 <style>
@@ -104,5 +121,22 @@ export default {
 
   .weather-box .temp {
     display: inline-block;  /* inline block because we want to add padding and text center it*/
+    padding: 10px 25px;
+    color: white;
+    font-size: 102px;
+    font-weight: 900;
+    text-shadow: 3px 6px rgba(0, 0, 0, 0.25);
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    margin: 30px 0;
+    box-shadow: 3px 6px rgba(0, 0, 0, 0.25)
+  }
+
+  .weather-box .weather {
+    color: #fff;
+    font-size: 48px;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 3px 6px rgba(0, 0, 0, 0.25);
   }
 </style>
