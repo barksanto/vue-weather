@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-  
+    <main>
+      <div class="search-box">
+        <input type="text" class="search-bar" placeholder="search..."/>
+      </div>
+    </main>
   </div>
 </template>
 
@@ -8,17 +12,27 @@
 
 
 export default {
-  name: 'App'
+  name: 'App',
+  data(){
+    return{
+      api_key: 'b7f7ba740725cadece7fa95b9c604600'
+    }
+  }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'montserrat', sans-serif;
+  }
+
+  #app{
+    background-image: url('https://images.unsplash.com/photo-1592210454359-9043f067919b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+  }
 </style>
