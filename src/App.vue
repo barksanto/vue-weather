@@ -74,13 +74,13 @@ body {
   font-family: 'montserrat', sans-serif;
 }
 #app {
-  background-image: url('https://images.unsplash.com/photo-1575518929362-920773c8e9dc?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=701&q=80');
+  background-image: url('./assets/cold-bg.jpg');
   background-size: cover;
   background-position: bottom;
   transition: 0.4s;
 }
 #app.warm {
-  background-image: url('https://images.unsplash.com/photo-1505554898845-050c97a90ad6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+  background-image: url('./assets/warm-bg.jpg');
 }
 main {
   min-height: 100vh;
