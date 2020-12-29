@@ -4,6 +4,17 @@
       <div class="search-box">
         <input type="text" class="search-bar" placeholder="search..."/>
       </div>
+
+      <div class="weather-wrap">
+        <div class="location-box">
+          <div class="location">Boston,Ma</div>
+          <div class="date">Tuesday 29 December</div>
+          <div class="weather-box">
+            <div class="temp">29°F</div>
+            <div class="weather">Rain</div>
+          </div>
+        </div>
+      </div>
     </main>
   </div>
 </template>
@@ -59,6 +70,39 @@ export default {
     appearance: none;
     border: none;
     outline:none;
-  background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0px 0px 16px rgba(0,0,0,0.25);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 0px 16px 0px 16px;
+    transition :0.4s;
+  }
+
+  .search-box .search-bar:focus{
+    background-color:  rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 0px 16px rgba(0,0,0,0.75);
+    border-radius: 16px 0px 16px 0px;
+  }
+
+  .location-box .location{
+    color: white;
+    font-size: 32px;
+    font-weight: 500;
+    text-align: center;
+    text-shadow: 1px 3px rgba(255, 255, 255, 0.25);
+  }
+
+  .location-box .date {
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    font-style: italic;
+  }
+
+  .weather-box{
+    text-align: center;
+  }
+
+  .weather-box .temp {
+    display: inline-block;  /* inline block because we want to add padding and text center it*/
   }
 </style>
