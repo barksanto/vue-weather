@@ -1,4 +1,3 @@
-
 <template>
   <div id="app" :class="typeof weather.main != 'undefined' && weather.main.temp > 16 ? 'warm' : ''">
     <main>
@@ -6,7 +5,7 @@
         <input 
           type="text" 
           class="search-bar" 
-          placeholder="Search..."
+          placeholder="Search for a location..."
           v-model="query"
           @keypress="fetchWeather"
         />
